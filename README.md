@@ -1,2 +1,2 @@
-# matf
-A repo for the materials for classes taught at the Faculty Of Mathematics, as part of the course "Game Development"
+# Razvoj video igara
+A repo for for course "Game Development" taught at Faculty of Mathematics
