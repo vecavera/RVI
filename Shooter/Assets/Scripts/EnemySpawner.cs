@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public List<GameObject> spawnedEnemies = new List<GameObject>();
     public List<Transform> spawnPoints = new List<Transform>();
     public int numberOfEnemies;
+    private int enemyCount;
     public int spawnTime;
 
     public PlayerMovement player;
@@ -32,7 +33,10 @@ public class EnemySpawner : MonoBehaviour
         GameObject instantietedEnemy = Instantiate(enemyPrefab,spawnPos,Quaternion.identity);
         spawnedEnemies.Add(instantietedEnemy);
         
-
+        enemyCount++;
+        if(enemyCount >= numberOfEnemies){
+            yield break;
+        }
         yield return new WaitForSecondsRealtime(time);
         }
 
